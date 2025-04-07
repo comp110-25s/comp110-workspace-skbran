@@ -26,7 +26,7 @@ def test_count_use1()-> None:
 
 def test_count_use2()-> None:
     """Counts numbers correctly"""
-assert count(["0","1","2","1","0"]) == {"0":2,"1":2,"2":1}
+    assert count(["0","1","2","1","0"]) == {"0":2,"1":2,"2":1}
 
 def test_count_edge()-> None:
     """Checks if empty list returns empty dict"""

@@ -44,9 +44,9 @@ def favorite_color(favs: dict[str, str]) -> str:
     return max_color
 
 
-def bin_len(my_list: list[str]) -> dict[int, set]:
+def bin_len(my_list: list[str]) -> dict[int, set[str]]:
     """Returns lengths of strings in a list."""
-    bin_dict: dict[int, set] = {}
+    bin_dict: dict[int, set[str]] = {}
     for each_string in my_list:
         if len(each_string) in bin_dict:
             bin_dict[len(each_string)].add(each_string)

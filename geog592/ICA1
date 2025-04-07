@@ -1,0 +1,15 @@
+# making a random number bw 1 and 100 of odd random number
+# sum them up
+rnList = random.randrange(100) + 1
+total = 0  # this is intialization
+for i in range(rnList):
+    rn = random.randrange(100) + 1
+    if rn % 2 != 0:
+        total += rn
+    else:
+        rn = rn + 1
+        if rn > 100:
+            rn = rn - 2
+            total += rn
+
+print("The total of all random numbers is ", total)

@@ -1,0 +1,35 @@
+def contains_char(word: str, char: str) -> bool:
+    """Checking new """
+    assert len(char) == 1, f"len ('{char}') is not 1"
+    index = 0
+    while index < len(word):
+        if word[index] == char:
+            return True
+        else:
+            index += 1
+    return False
+
+#checking for letter positioning
+WHITE_BOX: str = "\U00002B1C"
+GREEN_BOX: str = "\U0001F7E9"
+YELLOW_BOX: str = "\U0001F7E8"
+
+def emojified(guess: str, answer: str) -> str:
+    """testing for green, yellow, or white codification"""
+    assert len(guess) == len(answer), "Guess must be same length as secret"
+    x = 0
+    prnt = ""
+    while x != len(guess):
+        if contains_char(answer, guess[x]) == True:
+            if guess[x] == answer[x]:
+                prnt += GREEN_BOX
+            elif guess[x] != answer[x]:
+                prnt += YELLOW_BOX
+        else:
+            prnt += WHITE_BOX
+        x+=1
+        
+    return prnt
+
+
+print(emojified("crate", "court"))
